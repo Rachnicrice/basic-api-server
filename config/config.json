@@ -2,7 +2,7 @@
   "development": {
     "username": "rachaelrice",
     "password": "rootroot",
-    "database": "data_development",
+    "database": "animals",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
@@ -16,7 +16,7 @@
   "production": {
     "username": "rachaelrice",
     "password": "rootroot",
-    "database": "data_production",
+    "database": "animals",
     "host": "127.0.0.1",
     "dialect": "postgres"
   }

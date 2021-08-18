@@ -4,5 +4,10 @@ require('dotenv').config();
 const server = require('./src/server.js');
 
 const PORT = process.env.PORT || 3000;
+const { db } = require('./src/models/index.js');
 
-server.start(PORT);
+db.sync()
+  .then(() => {
+    server.start(PORT);
+  })
+  .catch(console.error);
