@@ -1,0 +1,33 @@
+{
+  "name": "basic-api-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "init": "sequelize db:create",
+    "start": "NODE_ENV=production node index.js",
+    "dev": "nodemon index.js",
+    "test": "NODE_ENV=test jest --coverage --verbose",
+    "test-watch": "NODE_ENV=test jest --verbose --watchAll"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rachnicrice/basic-api-server.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rachnicrice/basic-api-server/issues"
+  },
+  "homepage": "https://github.com/Rachnicrice/basic-api-server#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "jest": "^27.0.6",
+    "pg": "^8.7.1",
+    "sequelize": "^6.6.5",
+    "sequelize-cli": "^6.2.0",
+    "sqlite3": "^5.0.2",
+    "supertest": "^6.1.6"
+  }
+}
