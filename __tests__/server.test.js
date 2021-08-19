@@ -49,14 +49,14 @@ describe('Cat Route Testing', () => {
   });
 
   it('should respond with a 404 there is no route found', async () => {
-    return await mockRequest.get('/billie_eilish')
+    await mockRequest.get('/billie_eilish')
       .then(results => {
         expect(results.status).toEqual(404);
       });
   });
 
   it('should get all the cats', async () => {
-    return await mockRequest.post('/cat').send(cat)
+    await mockRequest.post('/cat').send(cat)
       .then( results => {
         mockRequest.get('/cats')
           .then(results => {
@@ -67,7 +67,7 @@ describe('Cat Route Testing', () => {
   });
 
   it('should get one cat', async () => {
-    return await mockRequest.post('/cat').send(cat)
+    await mockRequest.post('/cat').send(cat)
       .then( results => {
         mockRequest.get(`/cat/${results.id}`)
           .then(results => {
@@ -78,14 +78,14 @@ describe('Cat Route Testing', () => {
   });
 
   it('should create a new cat', async () => {
-    return await mockRequest.post('/cat').send(cat)
+    await mockRequest.post('/cat').send(cat)
       .then(results => {
         expect(results.status).toEqual(201);
       });
   });
 
   it('should update a cat', async () => {
-    return await mockRequest.post('/cat').send(cat)
+    await mockRequest.post('/cat').send(cat)
       .then( results => {
         mockRequest.put(`/cat/${results.id}`).send({name: 'Mr.Meows-a-lot'})
           .then(results => {
@@ -96,7 +96,7 @@ describe('Cat Route Testing', () => {
   });
 
   it('should delete a cat', async () => {
-    return await mockRequest.post('/cat').send(cat)
+    await mockRequest.post('/cat').send(cat)
       .then( results => {
         mockRequest.delete(`/cat/${results.id}`)
           .then(results => {
@@ -127,7 +127,7 @@ describe('Dog Route Testing', () => {
   });
 
   it('should respond with a 404 there is no route found', async () => {
-    return await mockRequest.get('/unicorns')
+    await mockRequest.get('/unicorns')
       .then(results => {
         expect(results.status).toEqual(404);
       });
