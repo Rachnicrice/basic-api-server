@@ -8,6 +8,8 @@ const validator = require('./middleware/validator.js');
 const app = express();
 
 app.use(logger);
+app.use(express.json());
+app.use(cors());
 
 app.get('/person', validator, (req, res) => {
   res.status(200).json({name: `${req.query.nameProvided}`});
