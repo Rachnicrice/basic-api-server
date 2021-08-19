@@ -14,16 +14,18 @@ https://rl-basic-api-server.herokuapp.com/
 
 ### Setup
 .env requirements (where applicable)
-PORT - Port Number
-DATABASE_URL - URL to the running Postgres instance/db
+PORT - 8080
+DATABASE_URL - postgres://localhost:5432/animals
 How to initialize/run your application (where applicable)
-e.g. npm start
-How to use your library (where applicable)
+1. npm i
+2. npm run start
 
 ### Tests
 How do you run tests?
-Any tests of note?
-Describe any tests that you did not complete, skipped, etc
+npm run test
+
+Describe any tests that you did not complete, skipped, etc.
+Having a problem with all of my route tests timing out.
 
 ### UML
 Link to an image of the UML for your application and response to events
