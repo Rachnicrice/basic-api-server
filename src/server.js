@@ -1,15 +1,21 @@
 'use strict';
 
 const express = require('express');
-const notFound = require('./error-handler/404.js');
-const errors = require('./error-handler/500.js');
+const dogRoutes = require('./routes/dogs.js');
+const catRoutes = require('./routes/cats.js');
+const notFound = require('./error-handlers/404.js');
+const errors = require('./error-handlers/500.js');
 const logger = require('./middleware/logger.js');
 const validator = require('./middleware/validator.js');
+const cors = require('cors');
 const app = express();
 
 app.use(logger);
 app.use(express.json());
 app.use(cors());
+
+app.use(dogRoutes);
+app.use(catRoutes);
 
 app.get('/person', validator, (req, res) => {
   res.status(200).json({name: `${req.query.nameProvided}`});
