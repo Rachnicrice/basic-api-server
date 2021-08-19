@@ -7,8 +7,10 @@
 ### Links and Resources
 
 ### ci/cd (GitHub Actions)
+https://github.com/Rachnicrice/basic-api-server/actions
 
 ### back-end server url
+https://rl-basic-api-server.herokuapp.com/
 
 ### Setup
 .env requirements (where applicable)
