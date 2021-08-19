@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "rachaelrice",
+    "password": "rootroot",
+    "database": "animals",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "rachaelrice",
+    "password": "rootroot",
+    "database": "data_test",
+    "host": "127.0.0.1",
+    "dialect": "sqlite3"
+  },
+  "production": {
+    "username": "rachaelrice",
+    "password": "rootroot",
+    "database": "animals",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  }
+}
